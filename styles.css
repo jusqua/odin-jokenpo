@@ -188,3 +188,37 @@ h1, h2 {
                -1px 1px 0 black;
 }
 
+footer {
+  position: absolute;
+  bottom: .5rem;
+  left: 0;
+  width: 100%;
+  --color: black;
+  text-align: center;
+  color: var(--color);
+}
+
+footer a {
+  color: var(--color);
+  text-decoration: none;
+  margin: 0 .2rem;
+  position: relative;
+  text-decoration: none;
+}
+
+footer a::after {
+  content: '';
+  position: absolute;
+  bottom: -.1rem;
+  left: 0;
+  border-bottom: 1px solid var(--color);
+  width: 100%;
+  transition: .2s width;
+  pointer-events: none;
+}
+
+footer a:hover::after,
+footer a:focus::after {
+  width: 0;
+}
+
